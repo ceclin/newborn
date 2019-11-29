@@ -10,7 +10,7 @@ namespace newborn
 {
 constexpr int8_t MessageTag(char c)
 {
-    return c >= '1' && c <= '9' ? c - '1' : c >= 'a' && c <= 'z' ? 10 + c - 'a' : -1;
+    return c >= '1' && c <= '9' ? c - '1' : c >= 'a' && c <= 'z' ? 9 + c - 'a' : -1;
 }
 
 template <size_t max>
