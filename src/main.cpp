@@ -46,9 +46,9 @@ void setup()
     servo_driver.writeMicroseconds(1, 1575);
   });
   handler.OnKeyUp(MessageTag('2'), [] {
-    servo_driver.writeMicroseconds(0, 1425);
-    servo_driver.writeMicroseconds(2, 1400);
-    servo_driver.writeMicroseconds(1, 1425);
+    servo_driver.writeMicroseconds(0, 1435);
+    servo_driver.writeMicroseconds(2, 1435);
+    servo_driver.writeMicroseconds(1, 1435);
   });
   handler.OnKeyUp(MessageTag('3'), [] {
     servo_driver.writeMicroseconds(0, 1500);
