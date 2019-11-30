@@ -2,7 +2,6 @@
 #define MESSAGE_HANDLER_H_
 
 #include <Arduino.h>
-#include <SoftwareSerial.h>
 
 #include "bitset.h"
 
@@ -18,7 +17,7 @@ class MessageHandler
 {
 public:
     MessageHandler(uint8_t receive_pin, uint8_t transmit_pin)
-        : state_{}, bt_{receive_pin, transmit_pin}
+        : state_{}
     {
         for (size_t i = 0; i < max; ++i)
         {
@@ -48,7 +47,7 @@ private:
     void (*down_[max])();
     void (*up_[max])();
 
-    SoftwareSerial bt_;
+    HardwareSerial &bt_ = Serial;
 };
 
 template <size_t max>

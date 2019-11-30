@@ -21,10 +21,8 @@ MotorDriver motor_driver(motor_left, motor_right);
 
 void setup()
 {
-  Serial.begin(9600);
-
   // set up servo
-  Wire.setClock(400000);
+  Wire.setClock(400000); // TODO: necessary?
   servo_driver.begin();
   servo_driver.setPWMFreq(50);
   // default servo state
